@@ -1,0 +1,68 @@
+<section class="container create-thought ff-inter">
+  <header>
+    <h2>Add some <br>new thought:</h2>
+  </header>
+  <form>
+    <label for="thought">Thought</label>
+    <input type="textarea" class="input" id="thought" name="thought" placeholder="Fill your thought" [value]="pensamento.content">
+
+    <label for="author">Author or source</label>
+    <input type="textarea" class="input" id="author" name="author" placeholder="Fill the author or the source" [value]="pensamento.author">
+
+    <label for="model">Select the card model:</label>
+    <div class="container-radio">
+      <div class="radio-model">
+        <label for="model1">
+          <input type="radio" name="card-model" id="model1" value="model1">
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Model 1</span>
+        </label>
+        Preview:
+        <div class="model model1 ff-roboto-mono">
+          <img src="../../../../assets/modelo1.png" alt="Blue quotes">
+          <p class="content">{{ pensamento.content }}</p>
+          <p class="author"><b>{{ pensamento.author }}</b></p>
+        </div>
+      </div>
+
+      <div class="radio-model">
+        <label for="model2">
+          <input type="radio" name="card-model" id="model2" value="model2">
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Model 2</span>
+        </label>
+        Preview:
+        <div class="model model2 ff-roboto-mono">
+          <img src="../../../../assets/modelo2.png" alt="Light blue quotes">
+          <p class="content">{{ pensamento.content }}</p>
+          <p class="author"><b>{{ pensamento.author }}</b></p>
+        </div>
+      </div>
+
+      <div class="radio-model">
+        <label for="model3">
+          <input type="radio" name="card-model" id="model3" value="model3">
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>Model 3</span>
+        </label>
+        Preview:
+        <div class="model model3 ff-roboto-mono">
+          <img src="../../../../assets/modelo3.png" alt="Green quotes">
+          <p class="content">{{ pensamento.content }}</p>
+          <p class="author"><b>{{ pensamento.author }}</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="button">Save</button>
+      <button class="button">Cancel</button>
+    </div>
+  </form>
+</section>

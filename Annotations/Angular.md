@@ -14,7 +14,7 @@ When i have a html property i can use in that way:
 [value] = "myComponentProperty";
 ```
 
-If i don't, i can use in that another way:
+If i don't, i can use in that another way with interpolation:
 
 ```html
 <p>The value of the component property is: {{"myComponentProperty}}</p>
