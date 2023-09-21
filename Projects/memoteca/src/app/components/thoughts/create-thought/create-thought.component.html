@@ -4,16 +4,16 @@
   </header>
   <form>
     <label for="thought">Thought</label>
-    <input type="textarea" class="input" id="thought" name="thought" placeholder="Fill your thought" [value]="pensamento.content">
+    <input type="textarea" class="input" id="thought" name="thought" placeholder="Fill your thought" [(ngModel)]="thought.content">
 
     <label for="author">Author or source</label>
-    <input type="textarea" class="input" id="author" name="author" placeholder="Fill the author or the source" [value]="pensamento.author">
+    <input type="textarea" class="input" id="author" name="author" placeholder="Fill the author or the source" [(ngModel)]="thought.author">
 
     <label for="model">Select the card model:</label>
     <div class="container-radio">
       <div class="radio-model">
         <label for="model1">
-          <input type="radio" name="card-model" id="model1" value="model1">
+          <input type="radio" name="card-model" id="model1" value="model1" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -22,14 +22,14 @@
         Preview:
         <div class="model model1 ff-roboto-mono">
           <img src="../../../../assets/modelo1.png" alt="Blue quotes">
-          <p class="content">{{ pensamento.content }}</p>
-          <p class="author"><b>{{ pensamento.author }}</b></p>
+          <p class="content">{{ thought.content }}</p>
+          <p class="author"><b>{{ thought.author }}</b></p>
         </div>
       </div>
 
       <div class="radio-model">
         <label for="model2">
-          <input type="radio" name="card-model" id="model2" value="model2">
+          <input type="radio" name="card-model" id="model2" value="model2" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -38,14 +38,14 @@
         Preview:
         <div class="model model2 ff-roboto-mono">
           <img src="../../../../assets/modelo2.png" alt="Light blue quotes">
-          <p class="content">{{ pensamento.content }}</p>
-          <p class="author"><b>{{ pensamento.author }}</b></p>
+          <p class="content">{{ thought.content }}</p>
+          <p class="author"><b>{{ thought.author }}</b></p>
         </div>
       </div>
 
       <div class="radio-model">
         <label for="model3">
-          <input type="radio" name="card-model" id="model3" value="model3">
+          <input type="radio" name="card-model" id="model3" value="model3" [(ngModel)]="thought.model">
           <div class="custom-radio">
             <span></span>
           </div>
@@ -54,15 +54,15 @@
         Preview:
         <div class="model model3 ff-roboto-mono">
           <img src="../../../../assets/modelo3.png" alt="Green quotes">
-          <p class="content">{{ pensamento.content }}</p>
-          <p class="author"><b>{{ pensamento.author }}</b></p>
+          <p class="content">{{ thought.content }}</p>
+          <p class="author"><b>{{ thought.author }}</b></p>
         </div>
       </div>
     </div>
 
     <div class="actions">
-      <button class="button">Save</button>
-      <button class="button">Cancel</button>
+      <button (click)="createThought()" class="button">Save</button>
+      <button (click)="cancel()" class="button">Cancel</button>
     </div>
   </form>
 </section>

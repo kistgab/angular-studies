@@ -6,10 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-thought.component.css'],
 })
 export class CreateThoughtComponent {
-  pensamento = {
+  thought = {
     id: 1,
     content: 'Learning Angular',
     author: 'Gabriel Kist',
-    model: '',
+    model: 'model2',
   };
+
+  createThought() {
+    alert('Thought was created');
+  }
+
+  cancel() {
+    alert('Thought was cancelled');
+  }
 }
